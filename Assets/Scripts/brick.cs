@@ -8,6 +8,7 @@ public class brick : MonoBehaviour
     public GameObject ball;
     public GameObject powerUp;
     public int damageLevel = 0;
+    public AudioSource audioSrc;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -25,6 +26,7 @@ public class brick : MonoBehaviour
     {
         damageLevel += 1;
         gameObject.GetComponent<Renderer>().material.color = new Color(1 - (0.2f * damageLevel), 0, 0);
+        AudioSource.PlayClipAtPoint(audioSrc.clip, transform.position);
         if (damageLevel == 3)
         {
             spawnPowerUp();
@@ -37,6 +39,7 @@ public class brick : MonoBehaviour
         {
             damageLevel += 1;
             gameObject.GetComponent<Renderer>().material.color = new Color(1 - (0.2f * damageLevel), 0, 0);
+            AudioSource.PlayClipAtPoint(audioSrc.clip, transform.position);
             if (damageLevel == 3)
             {
                 spawnPowerUp();

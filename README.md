@@ -1,5 +1,9 @@
 # Brick Breaker
 - A simple prototype of a brick breaker remake
+- 3 powerups
+  - Increased paddle size
+  - Extra balls
+  - Bullet
 
 # Video Demo
 
